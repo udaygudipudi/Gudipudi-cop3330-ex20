@@ -1,0 +1,71 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 1 Solution
+ *  Copyright 2021 Uday Gudipudi
+ */
+
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+
+    System.out.print("What is the order amount? ");
+    double order = scan.nextDouble();
+
+    System.out.print("What state do you live in? ");
+    String state = scan.next();
+
+    if (state.equals("Wisconsin")){
+
+      System.out.print("What county do you live in? ");
+      String county = scan.next();
+
+      if(county.equals("Eau Claire")){
+
+        double tax = order * 0.05;
+
+        double moretax = order * 0.005;
+
+        double total = order + tax + moretax;
+
+        System.out.printf("The tax is %.2f. ",tax);
+        System.out.printf("%n");
+        System.out.printf("The total is %.2f. ",total);
+
+      }
+
+      if(county.equals("Dane")){
+
+        double tax = order * 0.05;
+
+        double moretax = order * 0.004;
+
+        double total = order + tax + moretax;
+
+        System.out.printf("The tax is %.2f. ",tax);
+        System.out.printf("%n");
+        System.out.printf("The total is %.2f. ",total);
+
+      }
+
+    }
+
+    else if (state.equals("Illinois")){
+
+      double tax = order * 0.08;
+
+      double total = order + tax;
+
+      System.out.printf("The tax is %.2f. ",tax);
+      System.out.printf("%n");
+      System.out.printf("The total is %.2f. ",total);
+
+    }
+
+    else {
+
+      System.out.printf("The total is %.2f. ",order);
+
+    }
+  }
+}
